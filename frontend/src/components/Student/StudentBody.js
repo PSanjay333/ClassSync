@@ -11,7 +11,7 @@ const StudentBody = ({ studentId }) => {
     console.log('Fetching details for studentId:', studentId);
     const fetchStudentDetails = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/student_details/${studentId}`, {
+        const response = await axios.get(`https://classsync-backend.onrender.com/student_details/${studentId}`, {
           headers: {
             "x-token": localStorage.getItem("token"),
           },
@@ -21,7 +21,7 @@ const StudentBody = ({ studentId }) => {
         setFellowStudents(response.data.fellowStudents);
 
         // Fetch student's name separately or update the API to include it in response
-        const studentResponse = await axios.get(`http://localhost:5000/student/${studentId}`, {
+        const studentResponse = await axios.get(`https://classsync-backend.onrender.com/student/${studentId}`, {
           headers: {
             "x-token": localStorage.getItem("token"),
           },

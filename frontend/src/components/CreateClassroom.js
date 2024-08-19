@@ -22,7 +22,7 @@ const CreateClassroom = () => {
 
   const fetchAvailableTeachers = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/available_teachers', {
+      const response = await axios.get('https://classsync-backend.onrender.com/available_teachers', {
         params: { start_time, close_time, day },
         headers: {
           "x-token": localStorage.getItem("token"),

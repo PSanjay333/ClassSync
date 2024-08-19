@@ -30,7 +30,7 @@ const MyStudentList = ({ teacherId }) => {
     const fetchStudents = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/teacher_students/${teacherId}`,
+          `https://classsync-backend.onrender.com/teacher_students/${teacherId}`,
           {
             headers: {
               "x-token": localStorage.getItem("token"),

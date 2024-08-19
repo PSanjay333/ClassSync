@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000";
+const API_URL = "https://classsync-backend.onrender.com";
 
 export const createClassroom = async (classroomDetails) => {
     try {

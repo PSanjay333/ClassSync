@@ -9,7 +9,7 @@ const TeacherTimetable = ({ teacherId }) => {
     useEffect(() => {
         const fetchTimetable = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/teacher_timetable/${teacherId}`, {
+                const response = await axios.get(`https://classsync-backend.onrender.com/teacher_timetable/${teacherId}`, {
                     headers: {
                         "x-token": localStorage.getItem("token")
                     }

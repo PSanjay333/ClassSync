@@ -15,12 +15,12 @@ const AssignStudents = () => {
     const fetchData = async () => {
       try {
         const [teachersResponse, studentsResponse] = await Promise.all([
-          axios.get('http://localhost:5000/teachers', {
+          axios.get('https://classsync-backend.onrender.com/teachers', {
             headers: {
               "x-token": localStorage.getItem("token"),
             },
           }),
-          axios.get('http://localhost:5000/students', {
+          axios.get('https://classsync-backend.onrender.com/students', {
             headers: {
               "x-token": localStorage.getItem("token"),
             },
@@ -58,7 +58,7 @@ const AssignStudents = () => {
     setAlertType('');
     
     try {
-      await axios.post('http://localhost:5000/assign_students_to_teachers', {
+      await axios.post('https://classsync-backend.onrender.com/assign_students_to_teachers', {
         teacher_id: selectedTeacher,
         student_ids: selectedStudents
       },{

@@ -1,5 +1,5 @@
 // src/services/studentService.js
-const API_URL = "http://localhost:5000"; // Update with your API URL
+const API_URL = "https://classsync-backend.onrender.com"; // Update with your API URL
 
 export const getStudentById = async (id) => {
     try {

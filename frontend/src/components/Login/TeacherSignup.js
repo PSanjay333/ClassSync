@@ -26,7 +26,7 @@ const TeacherSignup = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/principal_teacher_signup', {
+      const response = await axios.post('https://classsync-backend.onrender.com/principal_teacher_signup', {
         name,
         teacherId,
         email,

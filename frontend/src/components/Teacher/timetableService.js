@@ -1,5 +1,5 @@
 // src/services/timetableService.js
-const API_URL = "http://localhost:5000"; // Update with your API URL
+const API_URL = "https://classsync-backend.onrender.com"; // Update with your API URL
 
 export const createTimetable = async (timetableData) => {
     try {

@@ -17,7 +17,7 @@ const TeacherLogin = () => {
     setAlertType("");
 
     try {
-      const response = await axios.post('http://localhost:5000/teacher_login', {
+      const response = await axios.post('https://classsync-backend.onrender.com/teacher_login', {
         email,
         password,
       });

@@ -17,7 +17,7 @@ const PrincipalLogin = () => {
     setAlertType("");
 
     try {
-      const response = await axios.post("http://localhost:5000/principal_login", {
+      const response = await axios.post("https://classsync-backend.onrender.com/principal_login", {
         email,
         password
       });
