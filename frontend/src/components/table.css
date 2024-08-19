@@ -1,0 +1,36 @@
+
+header {
+  position: relative;
+}
+
+.btn-dark {
+  white-space: nowrap; 
+}
+  
+  th, td, tr {
+    border: 3px solid #181717; 
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f4f4f4; 
+  }
+
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.table {
+  min-width: 600px; 
+}
+
+
+
+@media (max-width: 768px) {
+  .logins {
+    margin-top: 7rem; 
+  }
+}
+  

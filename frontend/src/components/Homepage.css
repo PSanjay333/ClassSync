@@ -1,0 +1,32 @@
+/* Homepage.css */
+
+
+.cover-container {
+    background: #1b1d1d; /* Dark background color */
+  }
+  
+  h1 {
+    color: #d4dce3; /* Light color for the title */
+    font-size: 3rem; /* Increase the font size */
+    font-weight: 700; /* Make the font bold */
+    margin-bottom: 1rem;
+  }
+  
+  .lead {
+    color: #e9ecef; /* Lighter text color for the lead paragraph */
+  }
+  
+  .btn-light {
+    color: #212529; /* Dark color for the button text */
+    background-color: #f8f9fa; /* Light background color for the button */
+    border-color: #ced4da; /* Border color for the button */
+  }
+  
+  .btn-light:hover {
+    background-color: #e2e6ea; /* Darker background on hover */
+  }
+  
+  footer p {
+    color: #adb5bd; /* Light grey color for the footer text */
+  }
+  
