@@ -36,7 +36,7 @@ const Homepage = () => {
             <p>
               ClassSync by{" "}
               <a
-                href="https://twitter.com/mdo"
+                href="https://my-portfolio-sanjay-pothuraju.vercel.app/"
                 className="text-white text-decoration-none"
               >
                 Sanjay Pothuraju
