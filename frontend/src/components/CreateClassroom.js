@@ -45,7 +45,7 @@ const CreateClassroom = () => {
     setAlertType('');
 
     try {
-      await axios.post('http://localhost:5000/create_classroom', {
+      await axios.post('https://classsync-backend.onrender.com/create_classroom', {
         class_id,
         start_time,
         close_time,
