@@ -10,9 +10,11 @@ const Timetable = require("./models/Timetable");
 const bcrypt = require("bcrypt");
 const mongoose = require("mongoose");
 const middleware = require("./api/middleware");
+require('dotenv').config();
 const saltRounds = 10;
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT;
+
 
 app.use(cors()); 
 app.use(express.json());
@@ -28,7 +30,7 @@ app.post("/principal_login", async (req, res) => {
 
     if (email === "principal@classroom.com" && password === "Admin") {
       let payload = { role: "principal" };
-      jwt.sign(payload, "jwtPassword", { expiresIn: "1d" }, (err, token) => {
+      jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: "1d" }, (err, token) => {
         if (err) throw err;
         return res
           .status(200)
@@ -57,7 +59,7 @@ app.post("/teacher_login", async (req, res) => {
     }
 
     let payload = { teacher: { id: teacher._id } };
-    jwt.sign(payload, "jwtPassword", { expiresIn: "1d" }, (err, token) => {
+    jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: "1d" }, (err, token) => {
       if (err) throw err;
       return res.json({
         token,
@@ -84,7 +86,7 @@ app.post("/student_login", async (req, res) => {
     }
 
     let payload = { student: { id: student._id } };
-    jwt.sign(payload, "jwtPassword", { expiresIn: "1d" }, (err, token) => {
+    jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: "1d" }, (err, token) => {
       if (err) throw err;
       return res
         .status(200)
