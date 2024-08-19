@@ -1,51 +1,42 @@
 import React from "react";
-// import Header from "./Header";
-import "./Homepage.css"; // Import the CSS file
 
 const Homepage = () => {
   return (
-    <div>
-      <body className="d-flex vh-100 text-center text-bg-dark">
-        <div className="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-          <header className="mb-auto">
-            <div>
-              <h3 className="float-md-start mb-0">ClassSync.</h3>
-            </div>
-          </header>
+    <div className="d-flex text-center text-bg-dark vh-100 w-100 text-bg-md-danger">
+      <div className="cover-container d-flex flex-column w-100 h-100 p-3 mx-auto">
+        <header className="mb-auto">
+          <h3 className="mb-0">ClassSync.</h3>
+        </header>
 
-          <main className="m-5 p-5">
-            <h1>ClassSync - Full Stack Classroom Management</h1>
-            <p className="lead">
-              ClassSync is a full-stack app for managing classrooms. Principals
-              can create classrooms and manage users, while teachers handle
-              timetables and students can view their details. Enjoy a
-              streamlined and modern experience.
+        <div className="container my-5">
+          <div className="position-relative p-5 text-center text-muted bg-body border border-dashed rounded-5">
+  
+            <h1 className="text-body-emphasis">ClassSync - Full Stack Classroom Management</h1>
+            <p className="col-lg-6 mx-auto mb-4">
+            ClassSync is a full-stack app for managing classrooms. Principals
+            can create classrooms and manage users, while teachers handle
+            timetables and students can view their details. Enjoy a
+            streamlined and modern experience.
             </p>
-
-            <p className="lead">
-              <a
-                href="/logins"
-                className="btn btn-lg btn-light fw-bold border-white bg-white"
-              >
-                Login
-              </a>
-            </p>
-          </main>
-
-          <footer className="mt-auto text-white-50">
-            <p>
-              ClassSync by{" "}
-              <a
-                href="https://twitter.com/mdo"
-                className="text-white text-decoration-none"
-              >
-                Sanjay Pothuraju
-              </a>
-              .
-            </p>
-          </footer>
+            <a className="btn btn-dark px-5 mb-5" type="button" href="/logins">
+              Login
+            </a>
+          </div>
         </div>
-      </body>
+
+        <footer className="mt-auto text-white-50">
+          <p>
+            ClassSync by{" "}
+            <a
+              href="https://my-portfolio-sanjay-pothuraju.vercel.app/"
+              className="text-white text-decoration-none"
+            >
+              Sanjay Pothuraju
+            </a>
+            .
+          </p>
+        </footer>
+      </div>
     </div>
   );
 };
