@@ -30,15 +30,15 @@ const TeacherBody = ({ teacherId }) => {
   }
 
   return (
-    <div>
-      <div>
-        <div className="p-5 mb-4 bg-body-tertiary rounded-3">
-          <div className="container-fluid py-5">
-            <h1 className="display-5 fw-bold" style={{ color: 'black' }}>Welcome, {teacher?.Name}</h1>
-            <p className="col-md-8 fs-4">
-            Manage your classes, students, and schedule with ease.
+    <div className="p-5 mb-4 bg-body-tertiary rounded-3">
+      <div className="container-fluid py-5">
+        <div className="row justify-content-center text-center">
+          <div className="col-lg-8">
+            <h1 className="display-5 fw-bold text-dark">Welcome, {teacher?.Name}</h1>
+            <p className="fs-4">
+              Manage your classes, students, and schedule with ease.
             </p>
-            <a className="btn btn-dark btn-lg" type="button" href={`/create_timetable?teacherId=${teacherId}`}>
+            <a className="btn btn-dark btn-lg" href={`/create_timetable?teacherId=${teacherId}`}>
               Create timetable
             </a>
           </div>

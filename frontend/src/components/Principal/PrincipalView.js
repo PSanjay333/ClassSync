@@ -11,8 +11,7 @@ const PrincipalView = () => {
             <PrincipalHeader/>
         </div>
         <div>
-            
-            <div className='m-5 p-5'>
+            <div className=''>
             <PrincipalBody/>
               <Teachers/>
               <Students/>

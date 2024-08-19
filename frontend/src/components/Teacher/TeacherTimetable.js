@@ -9,14 +9,17 @@ const TeacherTimetable = ({ teacherId }) => {
     useEffect(() => {
         const fetchTimetable = async () => {
             try {
-                const response = await axios.get(`https://classsync-backend.onrender.com/teacher_timetable/${teacherId}`, {
-                    headers: {
-                        "x-token": localStorage.getItem("token")
+                const response = await axios.get(
+                    `https://classsync-backend.onrender.com/teacher_timetable/${teacherId}`,
+                    {
+                        headers: {
+                            "x-token": localStorage.getItem("token"),
+                        },
                     }
-                });
+                );
                 setTimetable(response.data);
-            } catch (error) {
-                setError(error.response?.data?.message || 'An error occurred');
+            } catch (err) {
+                setError('Failed to fetch timetable');
             } finally {
                 setLoading(false);
             }
@@ -26,36 +29,34 @@ const TeacherTimetable = ({ teacherId }) => {
     }, [teacherId]);
 
     if (loading) return <p>Loading...</p>;
-    if (error) return <p style={{ color: 'red' }}>{error}</p>;
+    if (error) return <p>Error: {error}</p>;
 
     return (
         <div>
-            <h3>Your Timetable</h3>
+            <h2>Timetable</h2>
             <div className="table-responsive">
                 <table className="table table-dark table-striped">
                     <thead>
                         <tr>
-                            <th>Classroom ID</th>
-                            <th>Subject</th>
+                            <th>Day</th>
+                            <th>Class ID</th>
                             <th>Start Time</th>
                             <th>End Time</th>
-                            <th>Day</th>
                         </tr>
                     </thead>
                     <tbody>
                         {timetable.length > 0 ? (
-                            timetable.map((entry) => (
-                                <tr key={entry._id}>
-                                    <td>{entry.classroom_id}</td>
-                                    <td>{entry.subject}</td>
-                                    <td>{entry.start_time}</td>
-                                    <td>{entry.end_time}</td>
-                                    <td>{entry.day}</td>
+                            timetable.map((item) => (
+                                <tr key={item._id}>
+                                    <td>{item.day}</td>
+                                    <td>{item.classroom_id}</td>
+                                    <td>{item.start_time}</td>
+                                    <td>{item.end_time}</td>
                                 </tr>
                             ))
                         ) : (
                             <tr>
-                                <td colSpan="5">No timetable available</td>
+                                <td colSpan="4">No timetable available</td>
                             </tr>
                         )}
                     </tbody>

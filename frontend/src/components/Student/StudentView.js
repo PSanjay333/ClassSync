@@ -1,7 +1,7 @@
-import React from 'react';
-import StudentHeader from './StudentHeader';
-import StudentBody from './StudentBody';
-import { useLocation } from 'react-router-dom';
+import React from "react";
+import StudentHeader from "./StudentHeader";
+import StudentBody from "./StudentBody";
+import { useLocation } from "react-router-dom";
 
 const StudentView = () => {
   const location = useLocation();
@@ -11,14 +11,16 @@ const StudentView = () => {
   return (
     <div>
       <div>
-        <StudentHeader/>
+        <StudentHeader />
       </div>
-      <div className='m-5 p-5'>
-        {studentId ? (
-          <StudentBody studentId={studentId} />
-        ) : (
-          <p>No student ID provided</p>
-        )}
+      <div>
+        <div className="">
+          {studentId ? (
+            <StudentBody studentId={studentId} />
+          ) : (
+            <p>No student ID provided</p>
+          )}
+        </div>
       </div>
     </div>
   );

@@ -79,7 +79,7 @@ const MyStudentList = ({ teacherId }) => {
                   <td>{student.Name}</td>
                   <td>{student.email}</td>
                   <td>
-                    <div className="d-flex justify-content-around align-items-center">
+                    <div className="d-flex justify-content-center align-items-center gap-3">
                       <button
                         onClick={() => handleDelete(student._id)}
                         className="btn btn-light me-2"
